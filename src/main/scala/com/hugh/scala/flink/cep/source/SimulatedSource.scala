@@ -25,7 +25,7 @@ class SimulatedSource extends SourceFunction[DynamicMessage]{
           randomSpeed(40)
         )
       )
-      Thread.sleep(100)
+//      Thread.sleep(100)
     }
   }
 

@@ -30,8 +30,6 @@ object MonitorCEP {
 
     val ruleStream: BroadcastStream[RuleInFo] = env.addSource(new JdbcReader).broadcast(descriptor)
 
-
-
     val fitStream: DataStream[String] = env.addSource(new SimulatedSource)
       .connect(ruleStream)
       .process(new BroadcastProcessFunction[DynamicMessage, RuleInFo, String] {

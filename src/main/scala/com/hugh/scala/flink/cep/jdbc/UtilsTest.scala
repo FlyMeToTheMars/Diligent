@@ -10,11 +10,10 @@ import scala.collection.immutable
  **/
 object UtilsTest {
   def main(args: Array[String]): Unit = {
-    val stringToObjects: immutable.Seq[Map[String, Object]] = JdbcHelper.query("show tables;")
+    val stringToObjects: immutable.Seq[Map[String, Object]] = JdbcHelper.query("select * from event_mapping;")
     for (e <- stringToObjects) {
       println(e)
     }
-
-    println(JdbcHelper.query("select * from event_mapping;"))
+//    println(JdbcHelper.query("select * from event_mapping;"))
   }
 }

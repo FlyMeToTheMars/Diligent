@@ -11,7 +11,7 @@ import java.util.{LinkedList, ResourceBundle}
  **/
 object DBConnectionPool {
   //直接读取Resource中的文件 如果是.properties结尾 可以直接省略尾缀
-  private val reader = ResourceBundle.getBundle("jdbc")
+  private val reader = ResourceBundle.getBundle("mysql5")
   //连接池总数
   private val max_connection = reader.getString("max_connection")
   //产生连接数
